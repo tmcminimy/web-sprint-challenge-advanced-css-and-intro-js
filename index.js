@@ -227,8 +227,8 @@ function correctTypo(array, index, name){
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(array, index) {
-    return `The artist at index ${artists.id} is ${artists.name}`;
+function getArtistByIndex(array, num) {
+    return `The artist at index ${artists.index} is ${artists.name}`;
 }
 console.log(getArtistByIndex(artists, 0));
   /**
@@ -254,14 +254,14 @@ function get20s(array, ){
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(array, id) {
-    for(var i = 0; i < artists.index; i++){
-      if(artists[i].includes(0)){
-        artists.splice(i, 1); i--;
+    for(var i = 0; i < artists.id; i++){
+      if(artists[i].includes(id)){
+        artists.splice(i, artists.id); i--;
       }
     }
     return artists.length;
   }
-  console.log(removeArtist(artists, [0]));
+  console.log(removeArtist(artists, 0));
  
 
 /**
