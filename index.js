@@ -227,8 +227,8 @@ function correctTypo(array, index, name){
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(array, num) {
-    return `The artist at index ${artists.index} is ${artists.name}`;
+function getArtistByIndex(array, index) {
+    return `The artist at index ${index} is ${array[index].name} `;
 }
 console.log(getArtistByIndex(artists, 0));
   /**
@@ -236,11 +236,9 @@ console.log(getArtistByIndex(artists, 0));
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array, ){
-
-  /* Code here */
-
-}
+/* arr=artists[3].split(' - ');
+console.log(arr)
+ */
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -253,16 +251,32 @@ function get20s(array, ){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(array, id) {
-    for(var i = 0; i < artists.id; i++){
-      if(artists[i].includes(id)){
-        artists.splice(i, artists.id); i--;
+function wubWub(array, index){
+  for(var i = index; i >= 0; i--){
+    if(index[i] = 0);
+    array.splice(i, 1);
+  }
+}
+console.log(wubWub(artists, 0));
+
+/*
+ function removeArtist(array, index){
+    for(var i = array.indexOf(0) - 1; i >= 0; i--){
+      if(index[i].includes(0)){
+        array.remove(array, 1);
       }
     }
-    return artists.length;
+    return array.length;
   }
   console.log(removeArtist(artists, 0));
- 
+
+function removeArtiste(array, index){
+  if(index >= 0){
+    array.splice(array.index, 1);
+  }
+  return array.length;
+}
+console.log(removeArtiste(artists, 0)); */
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -290,13 +304,22 @@ function addArtist(array, id, name, years, genre, nationality, bio){
 and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
-
 function lotsOfArt(array){
-  if(array.paintings >= 100){
-    return artists.name;
+  for(var i = 0; i < array.length; i++){
+    if(array[i].paintings >= 100){
+      return array;
+    }
   }
 }
 console.log(lotsOfArt(artists));
+
+function lotsOfArte(array){
+  if(array.paintings > 100){
+    return array.name;
+  }
+}
+console.log(lotsOfArte(artists));
+
 
 
 
