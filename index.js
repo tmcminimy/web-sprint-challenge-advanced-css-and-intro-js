@@ -251,14 +251,26 @@ console.log(arr)
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function wubWub(array, index){
+console.log(artists[0]);
+
+function removeArtist(array, id){
+  for(var i = 0; i < array[id]; i++){
+    if(array[id[i]] === 0){
+      array.splice(1, 1);
+    }
+  }return array.length;
+}
+console.log(removeArtist(artists, 0));
+
+console.log(artists[0]);
+/* function wubWub(array, index){
   for(var i = index; i >= 0; i--){
     if(index[i] = 0);
     array.splice(i, 1);
   }
 }
 console.log(wubWub(artists, 0));
-
+ */
 /*
  function removeArtist(array, index){
     for(var i = array.indexOf(0) - 1; i >= 0; i--){
